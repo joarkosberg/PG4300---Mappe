@@ -1,6 +1,5 @@
 package test;
 
-import carRental.Custommer;
 import carRental.RentalCarApp;
 import carRental.RentalService;
 import org.junit.After;
@@ -14,14 +13,12 @@ import java.util.concurrent.Executors;
 import static org.junit.Assert.assertEquals;
 
 public class RentalCarAppTest {
-    private CountDownLatch countDownLatch;
     private RentalService rentalService;
 
 
     @Before
     public void onStart(){
         rentalService = new RentalService();
-        countDownLatch = new CountDownLatch(0);
     }
 
 

@@ -12,8 +12,6 @@ import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
 public class MultiThreadServerThreadTest {
-
-
     @Before
     public void onStart(){
     }
