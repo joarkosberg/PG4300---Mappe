@@ -12,7 +12,7 @@
 <body>
     <div class="wrapper">
         <h1><%=error%></h1>
-        <p>Gyldig input er tall i mellom 0-9 og kan ikke være større enn 2147483647.</p>
+        <p>Gyldig input er tall i mellom 0-9 og tallet kan ikke være større enn 2147483647.</p>
         <form>
             <input type="button" value="Gå tilbake"
                    onClick="history.go(-1); return true;">

@@ -3,7 +3,7 @@
             ------
             Joar Kosberg
             ------
-            17.04.2016
+            29.05.2016
 
 
 Eventuelle forutsetninger for aa kunne teste losningen?
@@ -25,6 +25,8 @@ Interessant Maven plugin:
 
   Jeg synes denne pluginen er veldig hendig, da jeg enkelt kan faa oversikt over koden gjennom rapporten med javadocs.
 
+  Jeg har ogsaa brukt Maven Commons Lang sin metode ExcpetionUtils for å printe stacktrace fra excpetion i error loggeren.
+
   Noen andre jeg har sett paa:
 
   Jeg kunne blant annet brukt Mockito for bedre testing. Da jeg hadde kunne mocke objekter for servlet testing
@@ -39,3 +41,5 @@ Kilder
   Doxia APT Format {{https://maven.apache.org/doxia/references/apt-format.html}}
 
   Commons Math for Apache {{http://commons.apache.org/proper/commons-math/apidocs/org/apache/commons/math3/primes/Primes.html}}
+
+  Commons Lang {{https://commons.apache.org/proper/commons-lang/}}

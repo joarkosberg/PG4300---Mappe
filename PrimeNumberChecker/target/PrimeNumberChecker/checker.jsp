@@ -18,9 +18,8 @@
         <%if(isPrime){%>
         <p>Ja det er ett primtall</p>
         <%}else{%>
-        <p>Nei, ikke ett primtall</p>
+        <p>Nei, det er ikke ett primtall</p>
         <%}%>
-
 
         <form>
             <input type="button" value="Gå tilbake"
