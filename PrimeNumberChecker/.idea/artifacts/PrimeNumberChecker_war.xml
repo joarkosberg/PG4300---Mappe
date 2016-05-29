@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="PrimeNumberChecker:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="PrimeNumberChecker.war">
-      <element id="artifact" artifact-name="PrimeNumberChecker:war exploded" />
-    </root>
-  </artifact>
-</component>
