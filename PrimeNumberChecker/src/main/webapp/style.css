@@ -1,0 +1,42 @@
+body{
+    text-align: center;
+    background-color: #f8f8f8;
+    padding-top: 60px;
+    font-family: "Adobe Arabic";
+    color: white;
+}
+
+h1{
+    font-size: 3em;
+    line-height: 20%;
+}
+
+p{
+    font-size: 1.4em;
+    line-height: 90%;
+}
+
+.wrapper{
+    margin:auto;
+    width: 400px;
+    background-color: crimson;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+input {
+    color: black;
+}
+
+input[type=submit], input[type=button]{
+    padding: 5px 20px;
+    background: crimson;
+    color:white;
+    border:1px solid black;
+    cursor:pointer;
+    border-radius: 5px;
+}
+
+input[type=submit]:hover, input[type=button]:hover{
+    background: #a01818;
+}
