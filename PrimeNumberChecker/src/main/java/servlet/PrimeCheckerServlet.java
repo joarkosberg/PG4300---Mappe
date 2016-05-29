@@ -6,6 +6,7 @@ package servlet;
  *  Oppgave: Innlevering 3 - Mappe
  */
 
+import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.apache.commons.math3.primes.Primes;
 import org.apache.log4j.Logger;
 import javax.servlet.RequestDispatcher;
@@ -26,9 +27,9 @@ public class PrimeCheckerServlet extends HttpServlet {
 
 
     /**
-     * Takes paramters from a HTTP POST request and dispatch new view based on input received
-     * @param request an HttpServletRequest object which contains a request from client
-     * @param response an HttpServletResponse object which contains response from server
+     * Takes parameters from a HTTP POST request and dispatch a new view based on input received
+     * @param request a HttpServletRequest object which contains request from client
+     * @param response a HttpServletResponse object which contains response from server
      * @see javax.servlet.http.HttpServlet#doPost(HttpServletRequest, HttpServletResponse)
      */
     public void doPost(HttpServletRequest request, HttpServletResponse response) {
@@ -38,8 +39,10 @@ public class PrimeCheckerServlet extends HttpServlet {
         try {
             if(isValid) showResult(request, response, input);
             else showError(request, response, input);
-        } catch (ServletException e) { errorsLog.error("Error with servlet: " + e.getStackTrace().toString());
-        } catch (IOException e) { errorsLog.error("Error with IO: " + e.getStackTrace().toString());
+        } catch (ServletException e) { errorsLog.error("Error with servlet: "
+                + ExceptionUtils.getStackTrace(e));
+        } catch (IOException e) { errorsLog.error("Error with IO: "
+                + ExceptionUtils.getStackTrace(e));
         }
     }
 
@@ -55,9 +58,9 @@ public class PrimeCheckerServlet extends HttpServlet {
 
 
     /**
-     * If error has happend, go to error view
-     * @param request an HttpServletRequest object which contains a request from client
-     * @param response an HttpServletResponse object which contains response from server
+     * If error has happened, go to error view
+     * @param request a HttpServletRequest object which contains request from client
+     * @param response a HttpServletResponse object which contains response from server
      * @param input input from user
      * @see javax.servlet.ServletRequest#setAttribute(String, Object)
      */
@@ -70,12 +73,12 @@ public class PrimeCheckerServlet extends HttpServlet {
 
     /**
      * If input was correct and answer is ready go to result view
-     * @param request an HttpServletRequest object which contains a request from client
-     * @param response an HttpServletResponse object which contains response from server
+     * @param request a HttpServletRequest object which contains request from client
+     * @param response a HttpServletResponse object which contains response from server
      * @param input input from user
      * @see javax.servlet.ServletRequest#setAttribute(String, Object)
      */
-    private void showResult(HttpServletRequest request, HttpServletResponse response, String input)
+    public void showResult(HttpServletRequest request, HttpServletResponse response, String input)
             throws ServletException, IOException {
         int number = Integer.parseInt(input);
         boolean isPrime = primeChecker(number);
@@ -114,12 +117,12 @@ public class PrimeCheckerServlet extends HttpServlet {
 
 
     /**
-     * Takes a number and returns if number is prime or not
-     * @param request an HttpServletRequest object which contains a request from client
-     * @param response an HttpServletResponse object which contains response from server
+     * Takes a number and returns if the number is prime or not
+     * @param request a HttpServletRequest object which contains request from client
+     * @param response a HttpServletResponse object which contains response from server
      * @see javax.servlet.RequestDispatcher#forward(ServletRequest, ServletResponse)
      */
-    private void dispatchView(HttpServletRequest request, HttpServletResponse response, String file)
+    public void dispatchView(HttpServletRequest request, HttpServletResponse response, String file)
             throws ServletException, IOException {
         RequestDispatcher view = request.getRequestDispatcher(file);
         view.forward(request, response);

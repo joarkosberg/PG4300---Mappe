@@ -1,0 +1,41 @@
+            ------
+            Dokumentasjon
+            ------
+            Joar Kosberg
+            ------
+            17.04.2016
+
+
+Eventuelle forutsetninger for aa kunne teste losningen?
+
+  Man maa ha en Tomcat server installert, for saa aa kjore war filen paa denne.
+
+
+Link til video-capture:
+
+  {{https://www.youtube.com/watch?v=dKHlYzjjl6k}}
+
+
+
+Interessant Maven plugin:
+
+  Jeg har tatt i bruk en plug in som heter Maven JXR. Den genererer rapporter med kilde kode.
+
+  Fra denne kildekoden kan jeg enkelt klikke meg inn og se javadocs ogsaa.
+
+  Jeg synes denne pluginen er veldig hendig, da jeg enkelt kan faa oversikt over koden gjennom rapporten med javadocs.
+
+  Noen andre jeg har sett paa:
+
+  Jeg kunne blant annet brukt Mockito for bedre testing. Da jeg hadde kunne mocke objekter for servlet testing
+
+  Eller Cobertura Code Coverage for god fremstilling av test dekningen min.
+
+
+Kilder
+
+  Maven JXR Plugin {{http://maven.apache.org/jxr/maven-jxr-plugin/}}
+
+  Doxia APT Format {{https://maven.apache.org/doxia/references/apt-format.html}}
+
+  Commons Math for Apache {{http://commons.apache.org/proper/commons-math/apidocs/org/apache/commons/math3/primes/Primes.html}}
